@@ -1,0 +1,672 @@
+/*! locomotive-scroll v4.1.3 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
+html.has-scroll-smooth {
+    overflow: hidden; }
+  
+  html.has-scroll-dragging {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
+  
+  .has-scroll-smooth body {
+    overflow: hidden; }
+  
+  .has-scroll-smooth [data-scroll-container] {
+    min-height: 100vh; }
+  
+  [data-scroll-direction="horizontal"] [data-scroll-container] {
+    height: 100vh;
+    display: inline-block;
+    white-space: nowrap; }
+  
+  [data-scroll-direction="horizontal"] [data-scroll-section] {
+    display: inline-block;
+    vertical-align: top;
+    white-space: nowrap;
+    height: 100%; }
+  
+  .c-scrollbar {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 11px;
+    height: 100%;
+    transform-origin: center right;
+    transition: transform 0.3s, opacity 0.3s;
+    opacity: 0; }
+    .c-scrollbar:hover {
+      transform: scaleX(1.45); }
+    .c-scrollbar:hover, .has-scroll-scrolling .c-scrollbar, .has-scroll-dragging .c-scrollbar {
+      opacity: 1; }
+    [data-scroll-direction="horizontal"] .c-scrollbar {
+      width: 100%;
+      height: 10px;
+      top: auto;
+      bottom: 0;
+      transform: scaleY(1); }
+      [data-scroll-direction="horizontal"] .c-scrollbar:hover {
+        transform: scaleY(1.3); }
+  
+  .c-scrollbar_thumb {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: black;
+    opacity: 0.5;
+    width: 7px;
+    border-radius: 10px;
+    margin: 2px;
+    cursor: -webkit-grab;
+    cursor: grab; }
+    .has-scroll-dragging .c-scrollbar_thumb {
+      cursor: -webkit-grabbing;
+      cursor: grabbing; }
+    [data-scroll-direction="horizontal"] .c-scrollbar_thumb {
+      right: auto;
+      bottom: 0; }
+
+
+
+
+      
+/*! locomotive-scroll v4.1.3 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
+html.has-scroll-smooth {
+  overflow: hidden; }
+
+html.has-scroll-dragging {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+.has-scroll-smooth body {
+  overflow: hidden; }
+
+.has-scroll-smooth [data-scroll-container] {
+  min-height: 100vh; }
+
+[data-scroll-direction="horizontal"] [data-scroll-container] {
+  height: 100vh;
+  display: inline-block;
+  white-space: nowrap; }
+
+[data-scroll-direction="horizontal"] [data-scroll-section] {
+  display: inline-block;
+  vertical-align: top;
+  white-space: nowrap;
+  height: 100%; }
+
+.c-scrollbar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 11px;
+  height: 100%;
+  transform-origin: center right;
+  transition: transform 0.3s, opacity 0.3s;
+  opacity: 0; }
+  .c-scrollbar:hover {
+    transform: scaleX(1.45); }
+  .c-scrollbar:hover, .has-scroll-scrolling .c-scrollbar, .has-scroll-dragging .c-scrollbar {
+    opacity: 1; }
+  [data-scroll-direction="horizontal"] .c-scrollbar {
+    width: 100%;
+    height: 10px;
+    top: auto;
+    bottom: 0;
+    transform: scaleY(1); }
+    [data-scroll-direction="horizontal"] .c-scrollbar:hover {
+      transform: scaleY(1.3); }
+
+.c-scrollbar_thumb {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: black;
+  opacity: 0.5;
+  width: 7px;
+  border-radius: 10px;
+  margin: 2px;
+  cursor: -webkit-grab;
+  cursor: grab; }
+  .has-scroll-dragging .c-scrollbar_thumb {
+    cursor: -webkit-grabbing;
+    cursor: grabbing; }
+  [data-scroll-direction="horizontal"] .c-scrollbar_thumb {
+    right: auto;
+    bottom: 0; }
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: gilroy;
+    color: #393838;
+    -webkit-text-stroke-color:#393838;
+}
+body,html{
+    width: 100%;
+    
+    background: linear-gradient( #c6bfbf, #ceaeae);
+}
+
+section{
+    width: 100%;
+    padding:3vw;
+    box-sizing: border-box;
+}
+#first{
+    
+    position: relative;
+    
+}
+.f-nav{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+    height: 100px;
+
+}
+.nav-left{
+    font-size: 24px;
+    font-weight: 900;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 1px;
+}
+.nav-right{
+    font-size: 24px;
+    font-weight: 900;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 1px;
+}
+hr{
+   margin: 0 2.5vw;
+   border-top: 1px solid black;
+}
+.center-h1{
+    
+    margin-top: 7vw;
+    display: flex;
+    flex-direction: column;
+}
+.center-h1>span{
+    font-size:12vw ;
+    font-weight: 900;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 7px;
+    line-height: 1;
+    letter-spacing: 17px;
+}
+.vertical-note{
+    font-size: 5vw;
+    font-family: boruto uchia;
+    letter-spacing: 5px;
+
+    position: absolute;
+    bottom: 5vw;
+    right: -10px;
+    transform: rotate(270deg);
+    -webkit-text-stroke-color: rgb(200, 17, 17);
+    -webkit-text-stroke-width: 2px;
+}
+.v4{
+    display:inline-block;
+    color: rgb(255, 255, 255);
+    font-size:12vw;
+    font-weight: 900;
+    
+    
+    letter-spacing: -4.3vw;
+    -webkit-text-stroke-color: rgb(255, 255, 255);
+    -webkit-text-stroke-width: 7px;
+    
+}
+
+    
+
+#second{
+    padding: 5vw 3vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.s-bottom{
+    
+    width: 40%;
+    font-size: 19px;
+    font-weight: 600;
+
+}
+.s-bottom>p{
+    max-width: 360px;
+}
+.s-top{
+    
+    width: 80%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.s-top a{
+    border-bottom: 1px solid black;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 1px;
+    padding: 10px 0;
+    font-size: 22px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+#third{
+    
+    
+    padding: 0 3vw;
+    display: flex;
+    justify-content: space-between;
+   align-items: center;
+}
+#content{
+    width: 40%;
+
+}
+#content>h3{
+    color: black;
+    margin: 10px 0;
+    font-weight: 900;
+}
+#content>p{
+    font-weight: 550;
+    font-size: 16px;
+    max-width: 360px;
+}
+
+#third .img-1{
+    background-image: url(https://locomotivemtl.github.io/locomotive-scroll/dist/images/locomotive01.jpg);
+    width: 60%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 900px;
+    position: relative;
+
+}
+.img-1>h2{
+    font-weight: 700;
+    font-size: 24px;
+    color: #D4CDC9;
+    -webkit-text-stroke-color: #D4CDC9;
+    -webkit-text-stroke-width: 1px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(0,-50%);
+}
+.img-1>#circle{
+    width: 130px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: black;
+    color: #D4CDC9;
+    position: absolute;
+    right: 10px;
+    bottom: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#circle>span{
+    color: wheat;
+    font-size: 22px;
+    font-weight: 900;
+
+}
+
+#imgs-co{
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    position: relative;
+}
+
+.img-2{
+    width: 40%;
+    
+}
+.img-3{
+    width: 22%;
+    
+}
+.img-2>img{
+    width: 100%;
+}
+.img-3>img{
+    width: 100%;
+}
+.circle{
+    width: 130px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: black;
+    color: #D4CDC9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#c-txt{
+    color: wheat;
+    font-size: 22px;
+    font-weight: 900;
+}
+#circle-1{
+    position: absolute;
+    left: 37%;
+    bottom: 50%;
+}
+#circle-2{
+    position: absolute;
+    right: 20%;
+    bottom: 45%;
+}
+#circle-3{
+    position: absolute;
+    bottom: 10%;
+    left: -5px;
+}
+#circle-4{
+    position: absolute;
+    right:  0;
+    bottom: 10%;
+}
+#circle-5{
+    position: absolute;
+    left: 55%;
+    bottom: 0%;
+}
+
+
+
+
+.img-2>h2{
+    font-weight: 900;
+    font-size: 26px;
+    color: #D4CDC9;
+    -webkit-text-stroke-color: #D4CDC9;
+    -webkit-text-stroke-width: 1px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(0,-50%);
+}
+
+.img-3>h2{
+    font-weight: 900;
+    font-size: 26px;
+    color: antiquewhite;
+    -webkit-text-stroke-color: #D4CDC9;
+    -webkit-text-stroke-width: 1px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(0,-50%);
+}
+#five{
+    height: 140vw;
+    padding: 20vw 0;
+    position: relative;
+
+}
+.f-container{
+    
+    position: absolute;
+    top: 20%;
+    height: 100%;
+    z-index: 0;
+    
+    
+}
+#stick-wrap{
+    height: 50vh;
+    margin: 30px;
+}
+.f-direction{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 10px;
+    
+
+}
+
+.fd-block{
+    margin-bottom: 5;
+    line-height: 4;
+    position: absolute;
+    
+}
+
+.strips{
+    display: inline-block;
+    z-index: 3;
+    background-color: white;
+    color: black;
+    font-size: 10vw;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: .9vw;
+
+    position: absolute;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+.block-1{
+    top: 13%;
+    transform: translateX(-50vw) rotate(26deg);
+}
+.block-2{
+    top: 35%;
+    
+}
+.block-3{
+    top: 45%;
+    transform: rotate(9deg);
+}
+.block-4{
+    top: 68%;
+    transform: translateX(-50vw) rotate(-19deg);
+}
+.block-5{
+    top: 60%;
+    transform: translateX(-10vw) rotate(3deg);
+}
+
+
+
+#six{
+    
+    width: 100vw;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.six-top{
+    width: 40%;
+}
+.six-bottom{
+    width: 60%;
+
+}
+.b-right{
+    margin: 70px 0;
+    margin-top: 5vw;
+    display: flex;
+    align-items: center;
+}
+.s-no{
+    font-size: 4vw;
+    font-weight: 900;
+    -webkit-text-stroke-color: rgb(255, 255, 255);
+    -webkit-text-stroke-width: .15vw;
+    width: 66px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #393838;
+    color: #ffffff;
+    margin-right:30px;
+    
+}
+.s-con{
+    font-size: 4vw;
+    font-weight: 700;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: .22vw;
+    letter-spacing: 3px;
+    display: inline-block   ;
+}
+
+.von-s{
+    letter-spacing: -10px;
+}
+
+#seven{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+
+.fix-target{
+    height: 120vh;
+    width: 60%;
+    position: relative;
+}
+.s-img{
+    height: 120vh;
+    width: 100% ;
+    background-image: url(https://locomotivemtl.github.io/locomotive-scroll/dist/images/locomotive04.jpg);
+    
+    position: absolute;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#fix-target{
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: -100vh;
+    
+
+}
+.heading>h1{
+    font-size: 11vw;
+    letter-spacing: .5vw;
+    line-height: 1;
+    font-weight: 900;
+    padding-top: 7vw;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: .4vw;
+    color: black;
+    padding-bottom: 2.5vw;
+}
+
+.heading>h1>span{
+    color: white;
+    -webkit-text-stroke-color: white;
+}
+#nine{
+    width: 100%;
+}
+.my-train{
+    font-size: 6.25rem;
+    width: 100%;
+    
+    line-height: 1.5;
+    padding: 50vh 0;
+    text-align: center!important;
+}
+#sexy{
+    display: inline-block;
+    /* transform:rotateY(180deg); */
+    
+}
+
+.rotate{
+    transform:rotateY(180deg);
+}
+.rotatex{
+    transform:rotateX(180deg);
+}
+.my-train>span{
+    text-align: center;
+}
+@media (max-width:900px) {
+    #second{
+        flex-direction: column;
+    }
+    .s-top{
+        padding-top: 5vw;
+        width: 100%;
+        align-items: center;
+    }
+    .s-bottom{
+        max-width: none ;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .s-bottom>p{
+        align-self: center;
+        justify-self: center;
+        width: 90%;
+        max-width: fit-content;
+    }
+    #third{
+        flex-direction: column;
+    }
+    #content{
+        justify-self: baseline;
+        padding: 6vw 0;
+        width: 100%;
+    }
+    #third .img-1{
+        width: 100%;
+    }
+    .f-nav{
+        margin-bottom: 10vw;
+    }
+    #six{
+        flex-direction: column;
+    }
+    .six-bottom{
+        margin-top: 22vw;
+    }
+    #seven{
+        flex-direction: column;
+    }
+    .fix-target{
+        width: 100%;
+    }
+}
+
+@media (max-width:600px){
+    .circle{
+        width: 70px;
+        height: 50px;
+    }
+    .c-txt{
+        font-size: 1vw;
+    }
+}
