@@ -1,50 +1,29 @@
-
-
-
 const scroll = new LocomotiveScroll({
     el: document.querySelector('#main'),
     smooth: true
 });
 
 
+const scrollContainer = document.querySelector('#yourScrollContainerId'); // Replace 'yourScrollContainerId' with the actual ID of your scroll container
+
+let lastScrollPosition = 0;
 
 
-// var tain= document.querySelector("#sexy")
+scroll.on('scroll', (instance) => {
+  const currentScrollPosition = instance.scroll.y;
 
+    if (currentScrollPosition < lastScrollPosition) {
+        document.querySelector(".train-two").style.transform = "rotateY(0deg)"
+       document.querySelector(".train-one").style.transform="rotateY(180deg)"
+        
+    // Scrolling up logic goes here
+    // console.log('Scrolling up!');
+  } else if (currentScrollPosition > lastScrollPosition) {
+    // Scrolling down logic goes here
+         document.querySelector(".train-two").style.transform = "rotateY(180deg)"
+       document.querySelector(".train-one").style.transform="rotateY(0deg)"
+    // console.log('Scrolling down!');
+  }
 
-// document.querySelector("#sexy").className="rotate"  
-
-// document.querySelector("#sexy").classList.add("rotatex")
-
-// document.querySelector("#sexy").classList.remove("rotatex")
-
-
-
-document.querySelector("#sexy").
-addEventListener('scroll',function(){
-    
-    
-    document.querySelector("#sexy").style.transform="rotateY(180deg)"
-})
-
-
-
-document.querySelector("#sexy").
-addEventListener('mousedown',function(){
-
-    document.querySelector("#sexy").style.transform='rotateY(0deg)'
-})
-
-
-
-gsap.to("#sexy",{
-
-    scrollTrigger:{
-        trigger:"#sexy",
-        scroller:"#main",
-        markers:true
-    },
-
-    
-
-})
+  lastScrollPosition = currentScrollPosition;
+});
