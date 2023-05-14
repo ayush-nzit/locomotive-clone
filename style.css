@@ -1,147 +1,10 @@
-/*! locomotive-scroll v4.1.3 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
-html.has-scroll-smooth {
-    overflow: hidden; }
-  
-  html.has-scroll-dragging {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none; }
-  
-  .has-scroll-smooth body {
-    overflow: hidden; }
-  
-  .has-scroll-smooth [data-scroll-container] {
-    min-height: 100vh; }
-  
-  [data-scroll-direction="horizontal"] [data-scroll-container] {
-    height: 100vh;
-    display: inline-block;
-    white-space: nowrap; }
-  
-  [data-scroll-direction="horizontal"] [data-scroll-section] {
-    display: inline-block;
-    vertical-align: top;
-    white-space: nowrap;
-    height: 100%; }
-  
-  .c-scrollbar {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 11px;
-    height: 100%;
-    transform-origin: center right;
-    transition: transform 0.3s, opacity 0.3s;
-    opacity: 0; }
-    .c-scrollbar:hover {
-      transform: scaleX(1.45); }
-    .c-scrollbar:hover, .has-scroll-scrolling .c-scrollbar, .has-scroll-dragging .c-scrollbar {
-      opacity: 1; }
-    [data-scroll-direction="horizontal"] .c-scrollbar {
-      width: 100%;
-      height: 10px;
-      top: auto;
-      bottom: 0;
-      transform: scaleY(1); }
-      [data-scroll-direction="horizontal"] .c-scrollbar:hover {
-        transform: scaleY(1.3); }
-  
-  .c-scrollbar_thumb {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: black;
-    opacity: 0.5;
-    width: 7px;
-    border-radius: 10px;
-    margin: 2px;
-    cursor: -webkit-grab;
-    cursor: grab; }
-    .has-scroll-dragging .c-scrollbar_thumb {
-      cursor: -webkit-grabbing;
-      cursor: grabbing; }
-    [data-scroll-direction="horizontal"] .c-scrollbar_thumb {
-      right: auto;
-      bottom: 0; }
-
-
-
-
-      
-/*! locomotive-scroll v4.1.3 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
-html.has-scroll-smooth {
-  overflow: hidden; }
-
-html.has-scroll-dragging {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none; }
-
-.has-scroll-smooth body {
-  overflow: hidden; }
-
-.has-scroll-smooth [data-scroll-container] {
-  min-height: 100vh; }
-
-[data-scroll-direction="horizontal"] [data-scroll-container] {
-  height: 100vh;
-  display: inline-block;
-  white-space: nowrap; }
-
-[data-scroll-direction="horizontal"] [data-scroll-section] {
-  display: inline-block;
-  vertical-align: top;
-  white-space: nowrap;
-  height: 100%; }
-
-.c-scrollbar {
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 11px;
-  height: 100%;
-  transform-origin: center right;
-  transition: transform 0.3s, opacity 0.3s;
-  opacity: 0; }
-  .c-scrollbar:hover {
-    transform: scaleX(1.45); }
-  .c-scrollbar:hover, .has-scroll-scrolling .c-scrollbar, .has-scroll-dragging .c-scrollbar {
-    opacity: 1; }
-  [data-scroll-direction="horizontal"] .c-scrollbar {
-    width: 100%;
-    height: 10px;
-    top: auto;
-    bottom: 0;
-    transform: scaleY(1); }
-    [data-scroll-direction="horizontal"] .c-scrollbar:hover {
-      transform: scaleY(1.3); }
-
-.c-scrollbar_thumb {
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-color: black;
-  opacity: 0.5;
-  width: 7px;
-  border-radius: 10px;
-  margin: 2px;
-  cursor: -webkit-grab;
-  cursor: grab; }
-  .has-scroll-dragging .c-scrollbar_thumb {
-    cursor: -webkit-grabbing;
-    cursor: grabbing; }
-  [data-scroll-direction="horizontal"] .c-scrollbar_thumb {
-    right: auto;
-    bottom: 0; }
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: gilroy;
-    color: #393838;
-    -webkit-text-stroke-color:#393838;
+    /* color: #222; */
+    -webkit-text-stroke-color:#222;
 }
 body,html{
     width: 100%;
@@ -169,31 +32,32 @@ section{
 }
 .nav-left{
     font-size: 24px;
-    font-weight: 900;
-    -webkit-text-stroke-color: black;
-    -webkit-text-stroke-width: 1px;
+    font-weight: 700;
+    /* -webkit-text-stroke-color: black; */
+    /* -webkit-text-stroke-width: 1px; */
 }
 .nav-right{
     font-size: 24px;
-    font-weight: 900;
-    -webkit-text-stroke-color: black;
-    -webkit-text-stroke-width: 1px;
+    font-weight: 700;
+    /* -webkit-text-stroke-color: black; */
+    /* -webkit-text-stroke-width: 1px; */
 }
 hr{
    margin: 0 2.5vw;
    border-top: 1px solid black;
 }
 .center-h1{
-    
-    margin-top: 7vw;
+    color: black;
+    margin-top: 3vw;
     display: flex;
     flex-direction: column;
 }
 .center-h1>span{
     font-size:12vw ;
-    font-weight: 900;
-    -webkit-text-stroke-color: black;
-    -webkit-text-stroke-width: 7px;
+    font-weight: 600;
+    color: #222;
+    /* -webkit-text-stroke-color: #222; */
+    /* -webkit-text-stroke-width: 3px; */
     line-height: 1;
     letter-spacing: 17px;
 }
@@ -206,19 +70,19 @@ hr{
     bottom: 5vw;
     right: -10px;
     transform: rotate(270deg);
-    -webkit-text-stroke-color: rgb(200, 17, 17);
+    -webkit-text-stroke-color: rgb(208, 145, 145);
     -webkit-text-stroke-width: 2px;
 }
 .v4{
     display:inline-block;
     color: rgb(255, 255, 255);
     font-size:12vw;
-    font-weight: 900;
+    font-weight: 600;
     
     
     letter-spacing: -4.3vw;
-    -webkit-text-stroke-color: rgb(255, 255, 255);
-    -webkit-text-stroke-width: 7px;
+    /* -webkit-text-stroke-color: rgb(255, 255, 255); */
+    /* -webkit-text-stroke-width: 7px; */
     
 }
 
@@ -255,14 +119,18 @@ hr{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    -webkit-text-stroke-color: black;
-    -webkit-text-stroke-width: 1px;
+    /* -webkit-text-stroke-color: black; */
+    /* -webkit-text-stroke-width: 1px; */
     padding: 10px 0;
     font-size: 22px;
     font-weight: 600;
+    color: #333;
+
     text-decoration: none;
 }
-
+.s-top>a :hover{
+    color: white;
+}
 #third{
     
     
@@ -300,8 +168,8 @@ hr{
     font-weight: 700;
     font-size: 24px;
     color: #D4CDC9;
-    -webkit-text-stroke-color: #D4CDC9;
-    -webkit-text-stroke-width: 1px;
+    /* -webkit-text-stroke-color: #D4CDC9; */
+    /* -webkit-text-stroke-width: 1px; */
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -341,7 +209,7 @@ hr{
     
 }
 .img-3{
-    width: 22%;
+    width: 29%;
     
 }
 .img-2>img{
@@ -351,8 +219,8 @@ hr{
     width: 100%;
 }
 .circle{
-    width: 130px;
-    height: 90px;
+    width: 110px;
+    height: 80px;
     border-radius: 50%;
     background-color: black;
     color: #D4CDC9;
@@ -361,9 +229,9 @@ hr{
     justify-content: center;
 }
 #c-txt{
-    color: wheat;
+    color: rgb(252, 252, 252);
     font-size: 22px;
-    font-weight: 900;
+    font-weight: 600;
 }
 #circle-1{
     position: absolute;
@@ -395,11 +263,11 @@ hr{
 
 
 .img-2>h2{
-    font-weight: 900;
+    font-weight: 600;
     font-size: 26px;
-    color: #D4CDC9;
-    -webkit-text-stroke-color: #D4CDC9;
-    -webkit-text-stroke-width: 1px;
+    color: #ffffff;
+    /* -webkit-text-stroke-color: #D4CDC9; */
+    /* -webkit-text-stroke-width: 1px; */
     position: absolute;
     bottom: 10px;
     left: 50%;
@@ -407,11 +275,11 @@ hr{
 }
 
 .img-3>h2{
-    font-weight: 900;
+    font-weight: 600;
     font-size: 26px;
-    color: antiquewhite;
-    -webkit-text-stroke-color: #D4CDC9;
-    -webkit-text-stroke-width: 1px;
+    color: rgb(255, 255, 255);
+    /* -webkit-text-stroke-color: #D4CDC9; */
+    /* -webkit-text-stroke-width: 1px; */
     position: absolute;
     bottom: 10px;
     left: 50%;
@@ -456,9 +324,9 @@ hr{
     display: inline-block;
     z-index: 3;
     background-color: white;
-    color: black;
-    font-size: 10vw;
-    font-weight: 600;
+    color: #222;
+    font-size: 11vw;
+    font-weight: 700;
     line-height: 1;
     letter-spacing: .9vw;
 
@@ -511,10 +379,10 @@ hr{
     align-items: center;
 }
 .s-no{
-    font-size: 4vw;
-    font-weight: 900;
-    -webkit-text-stroke-color: rgb(255, 255, 255);
-    -webkit-text-stroke-width: .15vw;
+    font-size: 17px;
+    font-weight: 700;
+    /* -webkit-text-stroke-color: rgb(255, 255, 255); */
+    /* -webkit-text-stroke-width: .15vw; */
     width: 66px;
     height: 50px;
     border-radius: 50%;
@@ -529,8 +397,8 @@ hr{
 .s-con{
     font-size: 4vw;
     font-weight: 700;
-    -webkit-text-stroke-color: black;
-    -webkit-text-stroke-width: .22vw;
+    /* -webkit-text-stroke-color: black; */
+    /* -webkit-text-stroke-width: .22vw; */
     letter-spacing: 3px;
     display: inline-block   ;
 }
@@ -571,20 +439,20 @@ hr{
 
 }
 .heading>h1{
-    font-size: 11vw;
+    font-size: 12.5vw;
     letter-spacing: .5vw;
-    line-height: 1;
-    font-weight: 900;
+    line-height: .9;
+    font-weight: 600;
     padding-top: 7vw;
-    -webkit-text-stroke-color: black;
-    -webkit-text-stroke-width: .4vw;
-    color: black;
+    /* -webkit-text-stroke-color: black; */
+    /* -webkit-text-stroke-width: .4vw; */
+    color: #222;
     padding-bottom: 2.5vw;
 }
 
 .heading>h1>span{
     color: white;
-    -webkit-text-stroke-color: white;
+    /* -webkit-text-stroke-color: white; */
 }
 #nine{
     width: 100%;
@@ -612,6 +480,15 @@ hr{
 .my-train>span{
     text-align: center;
 }
+
+#seven{
+    /* padding: 190px 42px; */
+    height: 250vh;
+}
+#eight{
+    padding-top: 40vw;
+}
+
 @media (max-width:900px) {
     #second{
         flex-direction: column;
