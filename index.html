@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="styleSheet/locoBoilerCode.css"> -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleSheet/locoBoilerCode.css">
+    <link rel="stylesheet" href="styleSheet/locomotiveScroll.css">
     <title>Document</title>
 </head>
 <body>
@@ -230,8 +230,9 @@
           
                 </p>
             </div>
-            <div class="fix-target">
-                <div class="s-img" data-scroll="" data-scroll-sticky data-scroll-target="#seven">
+            <div class="fix-target"data-scroll="" data-scroll-call="dynamicBackground" data-scroll-repeat="">
+
+                <div class="s-img"data-scroll="" data-scroll-sticky=""  data-scroll-sticky data-scroll-target="#seven">
                 <div id="fix-target">
 
                 </div>
@@ -250,12 +251,12 @@
 
         <section id="nine">
             <div class="my-train" data-scroll="" data-scroll-direction="horizontal" data-scroll-speed="10">
-                <span id="sexy">
+                <span id="sexy" class="train-one">
                     🚂
                 </span>
             </div>
-            <div class="my-train" data-scroll="" data-scroll-direction="horizontal" data-scroll-speed="-10">
-                <span id="sexy">
+            <div class="my-train"  data-scroll="" data-scroll-direction="horizontal" data-scroll-speed="-10">
+                <span id="sexy" class="train-two">
                     🚂
                 </span>
             </div>
@@ -272,6 +273,6 @@
         
     </div>
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
-    <script src="script.js"></script>
+    <script src="JavaScript/locomotiveScroller.js"></script>
 </body>
 </html>
